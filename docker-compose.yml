@@ -2,7 +2,7 @@
 services:
   server:
     build:
-      context: .
+      context: ./my-special-shop
       dockerfile: Dockerfile
     ports:
       - 3000:3000
@@ -19,7 +19,7 @@ services:
       - database
   worker:
     build:
-      context: .
+      context: ./my-special-shop
       dockerfile: Dockerfile
     command: ["npm", "run", "start:worker"]
     volumes:
@@ -32,6 +32,23 @@ services:
       DB_PASSWORD: password
     depends_on:
       - server
+  notification:
+    build:
+      context: ./novu-notification/my-novu-app
+      dockerfile: Dockerfile
+    ports:
+      - 4000:4000
+    command: ["npm", "start"]
+    volumes:
+      - /usr/src/app
+  client:
+    build:
+      context: ./storefront-angular-starter
+      dockerfile: Dockerfile
+    ports:
+      - 4200:4200
+    volumes:
+      - /usr/src/app
   database:
     image: postgres
     volumes:
