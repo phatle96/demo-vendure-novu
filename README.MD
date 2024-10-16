@@ -23,6 +23,9 @@ docker compose up
 	4. Vendure store-front app: http://localhost:4200
 	5. Postgres Database expose at port :5433
 
+
+![img](./doc-assets/Pasted%20image%2020241016183147.png)
+
 3. At this point, if you do not run into any error, the app can function normally, but no notification feature. We need to take further steps to get the notification feature work
    
    - We take advantage of the Novu Cloud, so we no need to implement all of services that a notification server required (database, worker, queue, storage,...), just define a business logic (when/ why/ how to send notifications to the users) on our side and sync to the Novu cloud, the app we implement is called **Bridge endpoint** in the Novu concept (https://docs.novu.co/concepts/endpoint)
@@ -54,6 +57,8 @@ docker compose up
 	   
 	   If no error return but nothing, it's work!!!
 
+![img](./doc-assets/Pasted%20image%2020241016183436.png)
+
 #### II. Test the app:
 
 1. The app is populated with the sample data, you could go to the store-front app (http://localhost:4200) to view as a customer role
@@ -61,5 +66,7 @@ docker compose up
    You need an admin account to access the back-office, use this account (id: superadmin/ password: superadmin)
 3. In the Admin UI, customers page, use could create some customer accounts (http://localhost:3000/admin/customer/customers)
 4. Use those accounts to login to the store-front app, use need to reload the page to take effect (it's a feature)
-5. Now, you can test the notification feature which will pop the message up on the store-front app when the admin sent, just select users then hit the send nofification button and wait for result
-![img 1](./doc-assets/Pasted%20image%2020241016182329.png)
+5. Now, you can test the notification feature which will pop the message up on the store-front app when the admin sent, just select users then hit the send nofification button -> write message -> send, then wait for the result
+
+
+![img](./doc-assets/Pasted%20image%2020241016182329.png)
