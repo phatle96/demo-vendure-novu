@@ -46,7 +46,7 @@ docker compose up
 	3. Run Cloudflare Tunnel
 	   
 		```sh
-		cloudflared tunnel --url http://localhost:4200
+		cloudflared tunnel --url http://localhost:4000
 		```
 
 	4. It will return a Tunnel URL (for example: https://standing-aged-efficiency-lite.trycloudflare.com). Then we will connect our bridge endpoint to the Novu Cloud, don't forget to add **/api/novu** suffix to the end of the tunnel URL. Run this script, notice that you need nodejs installed on your machine to use npx command

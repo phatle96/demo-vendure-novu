@@ -38,7 +38,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - 4000:4000
-    command: ["npm", "start"]
+    command: ["sh", "./scripts/sync.sh"]
     volumes:
       - /usr/src/app
   client:
