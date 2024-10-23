@@ -35,10 +35,10 @@ services:
   notification:
     build:
       context: ./novu-notification/my-novu-app
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.server
     ports:
       - 4000:4000
-    command: ["sh", "./scripts/sync.sh"]
+    command: ["sh", "./scripts/on-docker.sh"]
     volumes:
       - /usr/src/app
   client:
