@@ -38,7 +38,7 @@ services:
       dockerfile: Dockerfile.server
     ports:
       - 4000:4000
-    command: ["sh", "./scripts/on-docker.sh"]
+    command: ["bash", "./scripts/on-docker.sh"]
     volumes:
       - /usr/src/app
   client:
