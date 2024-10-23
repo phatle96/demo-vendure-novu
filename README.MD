@@ -103,12 +103,14 @@ At the time I write this demo, the app works as expected, but only for demo and 
 3. Notification service: 
    We take advantage of the Novu Cloud, so we no need to implement all of services that a notification server required (database, worker, queue, storage,...), just define a business logic (when/ why/ how to send notifications to the users) on our side and sync to the Novu cloud, the app we implement is called **Bridge endpoint** in the Novu concept (https://docs.novu.co/concepts/endpoint)	
    
-   Because the Novu Cloud workers need to communicate with our Bridge Endpoint (https://docs.novu.co/deployment/production), so we need to public it on network
+	Because the Novu Cloud workers need to communicate with our Bridge Endpoint (https://docs.novu.co/deployment/production), so we need to public it on network
    
+
    If you deploy it locally (on your machine, not a VPS or other server), you need a thing called tunnel to expose the app on network, currently uses Cloudflare Tunnel. When you start the Notification server, it will run the script which do these things
 	- Start the Novu bridge Endpoint Service
 	- Run the Cloudflare tunnel to get the tunnel URL. Currently, I make use of Cloudflare with no authentication, you need a Cloudflare API key for the tunnel not to suddenly shut down 
 	- Sync our bridge endpoint with Novu server. You must talk to the Novu Cloud that your app is running on this endpoint and Novu Cloud will take care of your business
+
    
 #### III. TEST THE APP:
 
