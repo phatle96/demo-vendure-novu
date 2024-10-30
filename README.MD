@@ -50,7 +50,7 @@ The demo is deployed on http://vendure-dev.innity.com.my that are included:
 2. The app will ask to verify your email, but you can create the post without email verifying 
 	1. In case you want to use full app features, you must verify your account email. 
 	2. Because we have not implemented any email provider for our demo app yet, so we will use Telegram Bot as an alternative way to get email from Pinkary. I created [@VenderMailBot](https://t.me/venduremailbot) as a mailbox to handle the email verification job
-	   ![IMG_0193.png](./doc-assets/IMG_0193.PNG)
+	   ![IMG_0193.png](./doc-assets/IMG_0193.png)
 	3. Just access the Telegram app on your phone or web, find the @VenderMailBot bot, then **/start** the chat, and send it the email address that you use to register the Pinkary account
 	   By entering your Pinkary register email to the bot, you will get the latest verifying email from Pinkary, and also subscribe to receive any emails that are sent from Pinkary in the future. 
 3. Create a new post from Pinkary, and then the notification will be broadcast to all of the [store-front app](http://vendure-dev.innity.com.my/) users, you will see the notification popup on the store-front app (user login required) with its content the same as the Pinkary post
