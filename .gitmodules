@@ -1,0 +1,15 @@
+[submodule "vendure-backend"]
+	path = vendure-backend
+	url = https://github.com/phatle96/vendure-backend.git
+[submodule "vendure-notification"]
+	path = vendure-notification
+	url = https://github.com/phatle96/vendure-notification.git
+[submodule "vendure-storefront"]
+	path = vendure-storefront
+	url = https://github.com/phatle96/vendure-storefront.git
+[submodule "vendure-pinkary"]
+	path = vendure-pinkary
+	url = https://github.com/phatle96/vendure-pinkary.git
+[submodule "vendure-mailbot"]
+	path = vendure-mailbot
+	url = https://github.com/phatle96/vendure-mailbot.git
