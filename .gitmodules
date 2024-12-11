@@ -13,3 +13,6 @@
 [submodule "vendure-mailbot"]
 	path = vendure-mailbot
 	url = https://github.com/phatle96/vendure-mailbot.git
+[submodule "glow-test"]
+	path = glow-test
+	url = https://github.com/phatle96/glow-test.git
